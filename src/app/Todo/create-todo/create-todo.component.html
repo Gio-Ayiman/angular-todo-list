@@ -1,0 +1,6 @@
+<div class="">
+  <form [formGroup]="todoForm" (ngSubmit)="onSave()" class="flex gap-2">
+    <input type="text" placeholder="Entrez le titre du Todo" class="input input-bordered" formControlName="title">
+    <button type="submit" class="btn btn-primary">Sauvegarder</button>
+  </form>
+</div>
