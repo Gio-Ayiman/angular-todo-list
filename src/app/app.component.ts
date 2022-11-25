@@ -13,6 +13,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit()
   {
-    // this.router.navigateByUrl('todo');
+    this.router.navigateByUrl('/auth/login');
   }
 }

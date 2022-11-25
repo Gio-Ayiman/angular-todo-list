@@ -1,0 +1,18 @@
+<div>
+  <div class="flex gap-2">
+    <input type="text" class="input input-bordered" placeholder="Entrez le tittre d'une Todo">
+    <button class="btn btn-primary">Chercher</button>
+    <div class="divider divider-horizontal">OU</div>
+    <button routerLink="/create" class="btn btn-primary">Créer</button>
+  </div>
+</div>
+
+<div class="flex flex-col gap-y-2">
+
+  <div class="p-8 border border-gray-300 rounded" *ngFor="let todo of todos$ | async">
+      <h1>{{todo.title}}</h1>
+      <div *ngIf="todo.isDone; else elseBlock" [ngClass]="{'badge badge-primary': todo.isDone}">Terminé</div>
+      <ng-template #elseBlock class="bg-primary-500">En cours</ng-template>
+  </div>
+
+</div>

@@ -1,0 +1,13 @@
+<form class="flex flex-col gap-y-4" [formGroup]="loginForm" (ngSubmit)="onLog()">
+    <div class="flex flex-col">
+      <label for="username">Nom d'utilisateur</label>
+      <input type="text" class="input input-bordered" id="username" formControlName="username">
+    </div>
+    <div class="flex flex-col">
+      <label for="password">Mot de passe</label>
+      <input type="password" class="input input-bordered" id="password" formControlName="password">
+    </div>
+    <div class="flex justify-end">
+      <button type="submit" class="btn btn-primary">Se connecter</button>
+    </div>
+</form>
